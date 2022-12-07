@@ -1,6 +1,6 @@
-FROM node:12-alpine
+FROM node:16-alpine
 
-RUN apk add --update bash
+RUN apk add --update bash g++ make py3-pip
 
 # Setting working directory. 
 WORKDIR /usr/src/app

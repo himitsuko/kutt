@@ -116,41 +116,6 @@ const Header: FC = () => {
             {publicRuntimeConfig.SITE_NAME}
           </ALink>
         </LogoImage>
-
-        {!isMobile && (
-          <Flex
-            style={{ listStyle: "none" }}
-            display={["none", "flex"]}
-            alignItems="flex-end"
-            as="ul"
-            m={0}
-            px={0}
-            pt={0}
-            pb="2px"
-          >
-            <Li>
-              <ALink
-                href="//github.com/thedevs-network/kutt"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="GitHub"
-                fontSize={[14, 16]}
-              >
-                GitHub
-              </ALink>
-            </Li>
-            <Li>
-              <ALink
-                href="/report"
-                title="Report abuse"
-                fontSize={[14, 16]}
-                isNextLink
-              >
-                Report
-              </ALink>
-            </Li>
-          </Flex>
-        )}
       </Flex>
       <RowCenterV
         m={0}

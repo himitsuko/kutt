@@ -228,24 +228,26 @@ const Shortener = () => {
           {message.text}
         </Text>
       )}
-      <Checkbox
-        {...raw({
-          name: "showAdvanced",
-          onChange: () => {
-            if (!isAuthenticated) {
-              setMessage(
-                "You need to log in or sign up to use advanced options."
-              );
-              return false;
+      {isAuthenticated && (
+        <Checkbox
+          {...raw({
+            name: "showAdvanced",
+            onChange: () => {
+              if (!isAuthenticated) {
+                setMessage(
+                  "You need to log in or sign up to use advanced options."
+                );
+                return false;
+              }
+              return !formState.values.showAdvanced;
             }
-            return !formState.values.showAdvanced;
-          }
-        })}
-        checked={formState.values.showAdvanced}
-        label="Show advanced options"
-        mt={[3, 24]}
-        alignSelf="flex-start"
-      />
+          })}
+          checked={formState.values.showAdvanced}
+          label="Show advanced options"
+          mt={[3, 24]}
+          alignSelf="flex-start"
+        />
+      )}
       {formState.values.showAdvanced && (
         <div>
           <Flex mt={4} flexDirection={["column", "row"]}>

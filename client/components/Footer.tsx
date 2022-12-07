@@ -27,12 +27,20 @@ const Footer: FC = () => {
       {!isAuthenticated && <ReCaptcha />}
       <Text fontSize={[12, 13]} py={2}>
         Made with love by{" "}
-        <ALink href="//thedevs.network/" title="The Devs" target="_blank">
-          The Devs
+        <ALink href="//depocket.com/" title="The Devs" target="_blank">
+          DePocket
         </ALink>
-        .{" | "}
+        {" | "}
         <ALink
-          href="https://github.com/thedevs-network/kutt"
+          href="https://app.depocket.com"
+          title="DePocket Dashboard"
+          target="_blank"
+        >
+          DePocket Dashboard
+        </ALink>
+        {" | "}
+        <ALink
+          href="https://github.com/depocket"
           title="GitHub"
           target="_blank"
         >
